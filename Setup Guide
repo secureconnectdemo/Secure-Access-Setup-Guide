@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secure Access - Guided Pilot Setup</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+      color: #000;
+    }
+    .card {
+      background: white;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 24px;
+      color: #000;
+    }
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .step, .intro-step {
+      display: none;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: #f1f1f1;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    .step.active, .intro-step.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .step h2, .intro-step h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .step ul, .intro-step ul {
+      padding-left: 20px;
+    }
+    .step ul li, .intro-step ul li {
+      margin-bottom: 8px;
+    }
+    code {
+      background: #e0e0e0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .nav-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 8px 16px;
+      background: #e0e0e0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #progress {
+      height: 14px;
+      background: #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    #bar {
+      height: 100%;
+      width: 0%;
+      background: #28a745;
+    }
+    .go-live {
+      display: none;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #e6ffe6;
+      border-left: 4px solid #28a745;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .step-count {
+      font-weight: bold;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 300px;
+    }
+    a {
+      color: #0056c7;
+    }
+    .pro-tip {
+      margin-top: 16px;
+      padding: 12px;
+      background: #e0f7fa;
+      border-left: 4px solid #00796b;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="intro-step active" id="intro">
+      <h2>👋 Welcome to Your Secure Access Guided Setup</h2>
+      <p><strong>Step 0: Enter Your Org ID</strong></p>
+      <input id="orgIdInput" placeholder="e.g., 8282217" type="text" />
+      <button onclick="saveOrgId()">Apply Org ID</button>
+      <p>This interactive guide will help you set up your Cisco Secure Access environment step-by-step. It's designed to ensure a smooth experience and minimize setup friction.</p>
+      <p>You’ll validate connectivity, apply security policies, and prepare for go-live with confidence.</p>
+      <br />
+ 
+    </div>
+    <div style="margin-bottom: 20px;">
+  <h2 style="margin-bottom: 10px;">🚀 Secure Access Guided Pilot Setup</h2>
+  <p>Through these steps, you’ll set up a pilot environment to validate your Secure Client installation and evaluate the solution. This pilot phase is a critical foundation for your full rollout—ensuring everything functions as expected before you scale across your organization.</p>
+</div>
+<div id="progress"><div id="bar"></div></div>
+    <div id="stepCounter" class="step-count"></div>
+
+   <div class="step active">
+      <h2>🔐 Step 1: Log in to the Secure Access Dashboard</h2>
+      <ul>
+        <li><a href="https://dashboard.sse.cisco.com/org/8282217/overview" target="_blank">🔗 Secure Access Overview</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="step">
+      <h2>🌐 Step 2: Add Private Domains to Traffic Steering</h2>
+      <ul>
+        <li><a href="https://dashboard.sse.cisco.com/org/8282217/connect/user-connectivity/internet-security" target="_blank">🔗 Traffic Steering Settings</a></li>
+        <li>Add local/internal domains (e.g., .corp) that should <strong>bypass Secure Access</strong>.</li>
+        <li>✅ This ensures these are not redirected through DNS/SWG (Full Proxy).</li>
+      </ul>
+    </div>
+
+
+
+    <div class="step">
+      <h2>💻 Step 3: Install Cisco Unified Client</h2>
+      <ul>
+        <li><a href="https://raw.githubusercontent.com/secureconnectdemo/SecureAccess/refs/heads/main/SecureClient_RootCert.ps1" target="_blank">🔗 Download PowerShell Installation Script</a></li>
+        <li>✅ Confirm that bypassed domains behave as expected (resolved locally and not redirected).</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>🔍 Step 4: Verify Secure Access Connection</h2>
+      <ul>
+        <li><a href="https://policy.test.sse.cisco.com/" target="_blank">🔗 policy.test.sse.cisco.com</a></li>
+        <li>✅ Page should load successfully if Secure Access is functioning and protecting your machine.</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>📱 Step 5: Validate Device Registration</h2>
+      <ul>
+        <li><a href="https://dashboard.sse.cisco.com/org/8282217/overview" target="_blank">🔗 Dashboard Overview</a></li>
+        <li>✅ Confirm devices appear protected by the Cisco Secure Client's Internet Security module.</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>🛑 Step 6: Generate Test Browser Traffic</h2>
+      <ul>
+        <li><a href="http://examplemalwaredomain.com" target="_blank">http://examplemalwaredomain.com</a></li>
+        <li><a href="http://www.internetbadguys.com" target="_blank">http://www.internetbadguys.com</a></li>
+        <li>✅ These should be flagged or logged by DNS Security/SWG.</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>📈 Step 7: Validate Activity Logging</h2>
+      <ul>
+        <li><a href="https://dashboard.sse.cisco.com/org/8282217/reports/activity" target="_blank">🔗 Activity Search</a></li>
+        <li>✅ Confirm test traffic is recorded and policy actions are applied (e.g., Block, Warn).</li>
+      </ul>
+    </div>
+
+<div class="step">
+  <h2>📬 Step 8: Schedule Threat Activity Reports</h2>
+  <ul>
+    <li>🔗 <a href="https://dashboard.sse.cisco.com/org/8282217/reports/scheduledreports" target="_blank">Scheduled Reports</a></li>
+    <li>✅ Create a daily threat report</li>
+    <li>✅ Set delivery time to <strong>9:00 AM</strong></li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🧰 Step 9: Enable Secure Web Gateway (SWG)</h2>
+  <ul>
+    <li>🔗 <a href="https://dashboard.sse.cisco.com/org/8282217/connect/user-connectivity/internet-security" target="_blank">DNS and Web Security Settings</a></li>
+    <li>✅ Enable category-based web filtering</li>
+    <li>✅ Enforce acceptable use policies</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🔐 Step 10: Enable HTTPS Inspection</h2>
+  <ul>
+    <li>🔗 <a href="https://dashboard.sse.cisco.com/org/8282217/secure/securityprofiles" target="_blank">Security Profiles – Internet Access</a></li>
+    <li>✅ Enable HTTPS decryption for encrypted traffic visibility</li>
+    <li>✅ Apply default or custom inspection profile</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🛡️ Step 11: Configure Do Not Decrypt List</h2>
+  <ul>
+    <li>🔗 <a href="https://dashboard.sse.cisco.com/org/8282217/secure/dontdecryptlists" target="_blank">Do Not Decrypt List</a></li>
+    <li>✅ Add exceptions for sensitive domains (e.g., banking, healthcare)</li>
+    <li>✅ Ensure compliance and preserve trust-based access</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🧪 Step 12: Enable File Sandboxing</h2>
+  <ul>
+    <li>🔗 <a href="https://dashboard.sse.cisco.com/org/8282217/secure/securityprofiles" target="_blank">Security Profiles – Internet Access</a></li>
+    <li>✅ Detect and isolate suspicious file behavior</li>
+    <li>✅ Enable retroactive alerts for unknown threats</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>📊 Step 13: Run Reports for Familiarization</h2>
+  <ul>
+    <li>🔗 <a href="https://dashboard.sse.cisco.com/org/8282217/reports/activity" target="_blank">Activity Reports</a></li>
+    <li>✅ Review:</li>
+    <ul>
+      <li>Threat detection insights</li>
+      <li>Web activity by domain/category</li>
+      <li>Endpoint and user-level analytics</li>
+    </ul>
+  </ul>
+</div>
+
+<div class="step">
+<h2>🏁 Final Note</h2>
+  <ul>
+    <li>✅ You've completed the Secure Access pilot checklist</li>
+    <li>✅ Ready to expand deployment to more users and devices</li>
+    <li>✅ Enable advanced features like <strong>ZTNA</strong>, <strong>IPS</strong>, <strong>DLP</strong>, and <strong>RBI</strong></li>
+    <li>✅ Refine policies and validate security posture with usage data</li>
+ </ul>
+</div>
+
+<div class="step">
+  <h2>🎉 Congratulations! </h2>
+  <ul>
+   You've completed the setup and are ready to Go Live with Cisco Secure Access. Contact your team to coordinate final rollout and enable advanced features.
+  </ul>
+</div>
+
+    <div class="nav-buttons">
+      <button onclick="prevStep()">⬅ Previous</button>
+      <button onclick="nextStep()">Next ➡</button>
+    </div>
+  </div>
+
+  <script>
+    let current = -1;
+    const steps = document.querySelectorAll('.step');
+    const stepCounter = document.getElementById('stepCounter');
+
+function showStep(index) {
+  document.getElementById('intro').style.display = index === -1 ? 'block' : 'none';
+  steps.forEach((s, i) => s.classList.toggle('active', i === index));
+  const progress = Math.round(((index + 1) / steps.length) * 100);
+  document.getElementById("bar").style.width = progress + "%";
+  stepCounter.textContent = index >= 0 ? `Step ${index + 1} of ${steps.length}` : '';
+  localStorage.setItem("stepIndex", index);
+
+  // Hide Previous on intro and first step
+  document.querySelector('.nav-buttons button:nth-child(1)').style.display = index <= 0 ? 'none' : 'inline-block';
+  // Hide Next on last step
+  document.querySelector('.nav-buttons button:nth-child(2)').style.display = index === steps.length - 1 ? 'none' : 'inline-block';
+}
+
+
+    function nextStep() {
+      if (current < steps.length - 1) current++;
+      showStep(current);
+    }
+
+    function prevStep() {
+      if (current  > - 1) current--;
+      showStep(current);
+    }
+
+    function saveOrgId() {
+      const orgId = document.getElementById("orgIdInput").value.trim();
+      if (!orgId) return alert("Please enter a valid Org ID.");
+      localStorage.setItem("orgId", orgId);
+      updateLinks(orgId);
+    }
+
+    function updateLinks(orgId) {
+      document.querySelectorAll("a").forEach(link => {
+        link.href = link.href.replace(/org\/\d+/, 'org/' + orgId);
+      });
+    }
+
+    function printSummary() {
+      window.print();
+    }
+
+    function startGuide() {
+      current = 0;
+      showStep(current);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const saved = Number(localStorage.getItem("stepIndex"));
+      const savedOrgId = localStorage.getItem("orgId");
+      if (savedOrgId) {
+        const input = document.getElementById("orgIdInput");
+        if (input) input.value = savedOrgId;
+        updateLinks(savedOrgId);
+      }
+      current = isNaN(saved) ? -1 : saved;
+      showStep(current);
+    });
+  </script>
+</body>
+</html>
