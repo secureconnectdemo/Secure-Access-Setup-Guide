@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secure Access - Guided Pilot Setup</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+      color: #000;
+    }
+    .card {
+      background: white;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+    }
+    h1 {
+      font-size: 24px;
+      color: #000;
+    }
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .description {
+      font-size: 15px;
+      padding: 15px;
+      background: #e8f0fe;
+      border-left: 4px solid #0070d2;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .step {
+      display: none;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: #f1f1f1;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    .step.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .step h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .step ul {
+      padding-left: 20px;
+    }
+    .step ul li {
+      margin-bottom: 8px;
+    }
+    code {
+      background: #e0e0e0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .nav-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 8px 16px;
+      background: #e0e0e0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #progress {
+      height: 14px;
+      background: #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    #bar {
+      height: 100%;
+      width: 0%;
+      background: #28a745;
+    }
+    .go-live {
+      display: none;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #e6ffe6;
+      border-left: 4px solid #28a745;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .step-count {
+      font-weight: bold;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 300px;
+    }
+    a {
+      color: #0056c7;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Getting Started with Cisco Secure Access</h1>
+    <p class="subtitle">💡 "This guided experience helps you confidently complete your Secure Client pilot—validating deployment, testing key features, and setting the stage for a setting the stage for a seamless full rollout, testing key features, and ensuring you're fully prepared for a successful rollout.</p>
+
+    <div 
+    
+    <br>
+     
+    </div>
+    <div id="progress"><div id="bar"></div></div>
+    <div id="stepCounter" class="step-count"></div>
+   <div class="step active">
+      <h2>📧 Step 1: Check Your Welcome Emails</h2>
+      <ul>
+        <li>• Claim Your Secure Access Subscription</li>
+        <li>• Activate Your ThousandEyes Dashboard</li>
+        <li>✅ Make sure to complete both.</li>
+      </ul>
+     
+  </div>
+
+    <div class="step">
+      <h2>🔑 Step 2: Enter Your Org ID</h2>
+      <p>Enter your Org ID to personalize links:</p>
+      <input id="orgIdInput" placeholder="e.g., 8282217" type="text" />
+      <button onclick="saveOrgId()">Apply Org ID</button>
+    </div>
+
+    <div class="step">
+      <h2>🔗 Step 3: Link Dashboards to Enable Experience Insights</h2>
+      <ul>
+        <li>Integrate Secure Access with ThousandEyes</li>
+        <li>✅ Activates Experience Insights (DEM)</li>
+        <li>✅ Monitor performance and optimize access</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>🔐 Step 4: Log in to the Secure Access Dashboard</h2>
+      <ul>
+        <li><a class="orgLink" href="https://dashboard.sse.cisco.com/org/8282217/overview" target="_blank">Secure Access Overview</a></li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>🌐 Step 5: Add Private Domains to Traffic Steering</h2>
+      <ul>
+        <li><a class="orgLink" href="https://dashboard.sse.cisco.com/org/8282217/connect/user-connectivity/internet-security" target="_blank">Traffic Steering Settings</a></li>
+        <li>Add local/internal domains (e.g., <code>.corp</code>)</li>
+      </ul>
+    </div>
+<div class="step">
+  <h2>💻 Step 6: Install Cisco Unified Client</h2>
+  <ul>
+    <li><a href="https://raw.githubusercontent.com/secureconnectdemo/SecureAccess/refs/heads/main/SecureClient_RootCert.ps1" target="_blank">Download Script</a></li>
+    <li>Install on test machines</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🔍 Step 7: Verify Connection</h2>
+  <ul>
+    <li>Visit <a href="https://policy.test.sse.cisco.com" target="_blank">policy.test.sse.cisco.com</a></li>
+    <li>Verify Secure Access enforcement</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>📱 Step 8: Validate Device Registration</h2>
+  <ul>
+    <li>Check device protection in Secure Access Overview</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🛑 Step 9: Generate Test Browser Traffic</h2>
+  <ul>
+    <li>Visit test domains: <code>internetbadguys.com</code></li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>📈 Step 10: Validate Logging</h2>
+  <ul>
+    <li><a href="https://dashboard.sse.cisco.com/org/8282217/reports/activity" target="_blank">Activity Reports</a></li>
+    <li>Check for logged test traffic</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>📬 Step 11: Schedule Threat Reports</h2>
+  <ul>
+    <li>Generate a daily threat report</li>
+    <li>Set delivery to 9:00 AM</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🧰 Step 12: Enable Secure Web Gateway (SWG)</h2>
+  <ul>
+    <li>Apply category-based filters (e.g., Gambling, Pornography)</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🔐 Step 13: Enable HTTPS Inspection</h2>
+  <ul>
+    <li>Inspect encrypted traffic using Security Profiles</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🛡️ Step 14: Configure Do Not Decrypt List</h2>
+  <ul>
+    <li>Exclude banking, healthcare, and trusted domains</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🧪 Step 15: Enable File Sandboxing</h2>
+  <ul>
+    <li>Detect suspicious file behavior via Security Profiles</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>📊 Step 16: Run Reports for Familiarization</h2>
+  <ul>
+    <li>Check threat, web usage, and endpoint data</li>
+    <li>Highlight value to stakeholders</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h2>🎉 Step 17: You’re Ready to Go Live!</h2>
+  <ul>
+    <li>You've completed the Secure Access pilot setup checklist.</li>
+    <li>✅ Proceed to rollout and onboarding additional users.</li>
+    <li>✅ Schedule your Go-Live meeting with your CSS or CSE.</li>
+  </ul>
+</div>
+
+<div class="go-live" id="goLiveMsg">
+  🎉 Congratulations! You've completed the setup and are ready to Go Live with Cisco Secure Access. Contact your team to coordinate final rollout and enable advanced features.
+</div>
+    <div class="nav-buttons">
+      <button onclick="prevStep()">⬅ Previous</button>
+      <button onclick="nextStep()">Next ➡</button>
+    </div>
+<!-- 🆘 Footer Help Section -->
+<div style="margin-top: 40px; border-top: 1px solid #ddd; padding-top: 20px; text-align: center; font-size: 14px; color: #555;">
+  🆘 <strong>Need Help?</strong>
+  <a href="https://mycase.cloudapps.cisco.com/case" target="_blank" style="color: #0056c7; text-decoration: none;">Contact Support</a>
+  or 
+  <a href="#" onclick="restartGuide()" style="color: #0056c7; text-decoration: none;">Restart Guide</a>
+</div>
+</div> 
+  </div>
+ 
+
+  <script>
+    let current = Number(localStorage.getItem("stepIndex")) || 0;
+    const steps = document.querySelectorAll('.step');
+    const stepCounter = document.getElementById('stepCounter');
+
+    function showStep(index) {
+      steps.forEach((s, i) => s.classList.toggle('active', i === index));
+      const progress = Math.round(((index + 1) / steps.length) * 100);
+      document.getElementById("bar").style.width = progress + "%";
+      stepCounter.textContent = `Step ${index + 1} of ${steps.length}`;
+      localStorage.setItem("stepIndex", index);
+      document.getElementById("goLiveMsg").style.display = index === steps.length - 1 ? "block" : "none";
+    }
+
+    function nextStep() {
+      if (current < steps.length - 1) current++;
+      showStep(current);
+    }
+
+    function prevStep() {
+      if (current > 0) current--;
+      showStep(current);
+    }
+
+    function saveOrgId() {
+      const orgId = document.getElementById("orgIdInput").value.trim();
+      if (!orgId) return alert("Please enter a valid Org ID.");
+      localStorage.setItem("orgId", orgId);
+      updateLinks(orgId);
+    }
+
+    function updateLinks(orgId) {
+      document.querySelectorAll("a.orgLink").forEach(link => {
+        link.href = link.href.replace(/org\/\d+/, 'org/' + orgId);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("orgId");
+      if (saved) {
+        const input = document.getElementById("orgIdInput");
+        if (input) input.value = saved;
+        updateLinks(saved);
+      }
+      showStep(current);
+    });
+  </script>
+</body>
+</html>
