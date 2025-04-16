@@ -1,0 +1,742 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Access Onboarding Action Plan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0056c7;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    th, td {
+      padding: 16px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    th {
+      background: #0056c7;
+      color: white;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .owner {
+      font-weight: bold;
+      color: #006f8c;
+    }
+  </style>
+</head>
+-
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Access Onboarding Action Plan - Page 2</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #0056c7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    th, td {
+      padding: 16px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+    th {
+      background: #0056c7;
+      color: white;
+      font-weight: 600;
+      text-align: left;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .owner {
+      font-weight: bold;
+      color: #006f8c;
+    }
+    a {
+      color: #0056c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Onboarding Action Plan – Secure Access (Page 2 of 3)</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Action Item</th>
+        <th>Engagement</th>
+        <th>Sub Engagement</th>
+        <th>Description</th>
+        <th>Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Assist Customer With Features in 1st Outcome (Secure Application Access)</td>
+        <td>Guide Deployment Of User, Application, and Resource Protection</td>
+        <td>
+          <strong>SIA</strong>
+          <ol>
+            <li>Deploy and register a <a href="#">Roaming Module</a></li>
+            <li>Onboard test sites <a href="#">via network registration</a></li>
+            <li>Customize default SIA <a href="#">policies</a></li>
+            <li>Enable SWG for a roaming module</li>
+          </ol>
+          <strong>SPA</strong>
+          <ol>
+            <li><a href="#">Provision user/group identities</a> in Secure Access (SA)</li>
+            <li>Connect internal resources via <a href="#">IPsec tunnels or Resource Connector</a></li>
+            <li>Configure <a href="#">Private Resource objects</a></li>
+            <li>Establish custom <a href="#">Private Access Rules</a></li>
+            <li>Configure Remote Access VPN service/ZTA</li>
+          </ol>
+        </td>
+        <td>
+          <ul>
+            <li>CSS to identify and document the deployment requirements/goals for this use-case</li>
+            <li>CSS to provide documentation & education on deployment options for each Sub Engagement</li>
+            <li>CSS to document the customer’s intended use for each feature in CS Console (Notes section of this Action Item)</li>
+            <li>CSS to meet with customer to support the deployment of these features and log calls/emails to CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+      <tr>
+        <td>Educate Customer On Features In 2nd Outcome (Threat Visibility & Security Controls)</td>
+        <td>Educate Customer On Threat Visibility & Granular Application/Activity Controls</td>
+        <td>
+          <strong>SIA</strong>
+          <ol>
+            <li>Provision user/group identities using AD connector or Cloud IDP</li>
+            <li>Improve visibility for SWG traffic with <a href="#">SAML</a></li>
+            <li>Deploy at least one pair <a href="#">virtual appliance</a></li>
+            <li>Configure and apply <a href="#">custom SIA policies</a></li>
+            <li>Implement <a href="#">content filtering, application, or destination list</a> rules</li>
+            <li>Set up a <a href="#">web profile</a> with HTTPS decryption and enhanced security features</li>
+            <li>Configure and test a <a href="#">Data Loss Prevention (DLP)</a> profile</li>
+            <li>Configure and test <a href="#">Remote Browser Isolation (RBI)</a></li>
+            <li>Set up and validate an SPA rule with <a href="#">Intrusion Prevention System (IPS)</a></li>
+            <li>Test API integrations</li>
+          </ol>
+          <strong>SPA</strong>
+          <ol>
+            <li>Configure and test <a href="#">posture profiles</a></li>
+            <li>Configure additional remote access client settings</li>
+          </ol>
+        </td>
+        <td>
+          <ul>
+            <li>CSS to identify and document the deployment requirements/goals for this use-case</li>
+            <li>CSS to provide documentation & education on deployment options for each Sub Engagement</li>
+            <li>CSS to document the customer’s intended use for each feature in CS Console (Notes section of this Action Item)</li>
+            <li>CSS to meet with customer to support the deployment of these features and log calls/emails to CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+      <tr>
+        <td>Educate Customer On Features In 3rd Outcome (Seamless Application Access Experience)</td>
+        <td>Educate Customer On Improving User Experience & Productivity</td>
+        <td>
+          <strong>SIA/SPA</strong>
+          <ol>
+            <li>Deploy and utilize <a href="#">insights</a> with the ThousandEyes agent</li>
+          </ol>
+        </td>
+        <td>
+          <ul>
+            <li>CSS to identify and document the deployment requirements/goals for this use-case</li>
+            <li>CSS to provide documentation & education on deployment options for each Sub Engagement</li>
+            <li>CSS to document the customer’s intended use for each feature in CS Console (Notes section of this Action Item)</li>
+            <li>CSS to meet with customer to support the deployment of these features and log calls/emails to CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Access Onboarding Action Plan - Page 3</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #0056c7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    th, td {
+      padding: 16px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+    th {
+      background: #0056c7;
+      color: white;
+      font-weight: 600;
+      text-align: left;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .owner {
+      font-weight: bold;
+      color: #006f8c;
+    }
+    a {
+      color: #0056c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Onboarding Action Plan – Secure Access (Page 3 of 3)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Action Item</th>
+        <th>Engagement</th>
+        <th>Sub Engagement</th>
+        <th>Description</th>
+        <th>Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Complete Deployment Retrospective With The Customer And Discuss Customer Goals, Log Customer Pulse</td>
+        <td>Deployment Review</td>
+        <td>
+          <ul>
+            <li>Deployment Review Offer</li>
+            <li>Deployment Review Call & Transition Introduction</li>
+            <li>Email Follow Up</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>After Onboarding Exit Criteria and deployment goals have been met, the Strategic CSS offers the customer a deployment review</li>
+            <li>Strategic CSS <a href="#">summarizes the deployment, shares successes, and suggestions</a>. Then they transition the customer to a monthly cadence (depending on Segment/Support)</li>
+            <li>Strategic CSS to send notes to the customer summarizing the call and one to many resources</li>
+            <li>Strategic CSS to log call and email can be logged in CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+      <tr>
+        <td>If Applicable Document Steps to Achieve full SSE Adoption in Customer Environment</td>
+        <td>Transition To Adopt</td>
+        <td>
+          <ul>
+            <li>Complete onboarding exit form</li>
+            <li>Update Customer Pulse</li>
+            <li>Close Onboarding Action Plan</li>
+            <li>Open Adoption Action Plan</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Strategic CSS to complete the onboarding exit form with a summary of the deployment and next steps for adoption</li>
+            <li>Strategic CSS to log the customer’s sentiment as a Customer Pulse following the deployment</li>
+            <li>Strategic CSS to check off remaining Action Items and log notes if they are missing</li>
+            <li>Strategic CSS to mark the Action Plan as Closed-Successful</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Access Onboarding Action Plan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #0056c7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    th, td {
+      padding: 16px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+    th {
+      background: #0056c7;
+      color: white;
+      font-weight: 600;
+      text-align: left;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .owner {
+      font-weight: bold;
+      color: #006f8c;
+    }
+    a {
+      color: #0056c7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+      background-color: #e3ebf9;
+      padding: 10px;
+      border: 1px solid #ccd;
+      margin-top: 16px;
+      border-radius: 6px;
+    }
+    details[open] summary {
+      border-bottom: 0;
+      border-radius: 6px 6px 0 0;
+    }
+    details div {
+      border: 1px solid #ccd;
+      border-top: none;
+      padding: 10px;
+      border-radius: 0 0 6px 6px;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Secure Access Onboarding Action Plan</h1>
+
+  <details open>
+    <summary>📦 Phase 1: Kickoff, Provisioning & Goal Setting</summary>
+    <div>
+</head>
+<body>
+  <h1>Onboarding Action Plan – Secure Access</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Action Item</th>
+        <th>Engagement</th>
+        <th>Sub Engagement</th>
+        <th>Description</th>
+        <th>Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Send Introduction Email To Customer</td>
+        <td>Send Introduction Email To Customer</td>
+        <td>
+          <ul>
+            <li>For EA (if applicable), col<div>
+      <div class="discussion-board">
+        <h3>💬 Discussion & Suggestions for Phase 2</h3>
+        <div class="comment">
+          <p>Can we get more clarity on the SWG policy configuration?</p>
+          <div class="comment-controls">
+            <span title="Like">👍</span>
+            <span title="Useful">✅</span>
+            <span title="Reply">💬</span>
+          </div>
+        </div>
+        <textarea placeholder="Add your comment or reply..."></textarea>
+        <br><button>Submit</button>
+      </div>
+    </div>laborate with PAS for EA portal activation</li>
+            <li>Validate provisioning contact received the information</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Strategic CSS to identify PAS and coordinate with this resource through EA provisioning</li>
+            <li>Strategic CSS to identify provisioning contact by reviewing the web order</li>
+            <li>Strategic CSS to verify this is the contact that received the claim code using the Paid Accounts Tableau Report</li>
+            <li>Strategic CSS to email the customer contacts shared by Sales or found in the CS Console via the Introduction Email</li>
+            <li>All CSS to review Discovery Questionnaire responses</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Internal Synch With Account Team, CSS</td>
+        <td rowspan="2">Sales-To-Success Handoff</td>
+        <td>
+          <ul>
+            <li>Identify Cisco Contacts</li>
+            <li>Sales Team, CX Team, Renewals Team</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Identify contacts from each team using the CS Console and other Cisco tools</li>
+            <li>Request technical resource if not already assigned</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS</td>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>Internal Success Sync</li>
+            <li>Account Team Handoff (Complete Handoff Questionnaire)</li>
+            <li>Risk identification</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Strategic CSS and technical resource meet internally to develop a plan for account team meeting</li>
+            <li>Leverage Discovery Questionnaire responses if supplied</li>
+            <li>Strategic CSS to send the account team handoff questions in advance as part of the Internal Sync offer</li>
+            <li>Review handoff questionnaire in Internal Sync meeting. Document call in CS Console</li>
+            <li>If no use case or admin user is not given, proceed to the Seeded Process (mark AP as Off Trajectory and create a Seeded Adoption Barrier)</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+
+      <tr>
+        <td rowspan="1">Provision & Activate Secure Access</td>
+        <td rowspan="1">Complete Provisioning Process</td>
+        <td>
+          <ul>
+            <li>Attach Existing Secure Access Tenants (Brownfield)</li>
+            <li>Activate Secure Access</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>If Trial is Present – Strategic CSS to provide guidance on attaching existing Secure Access tenants using this documentation</li>
+            <li>If Greenfield – Strategic CSS to walk the customer through using the claim code to activate Secure Access (Use the Paid Accounts Tableau Report to check if a customer used this code)</li>
+            <li>For issues with provisioning, instruct the customer to open a TAC case</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Customer Kickoff & Create Verified Customer Goals</td>
+        <td rowspan="2">Kick Off Call</td>
+        <td>
+          <ul>
+            <li>Success Kick Off Call Offer</li>
+            <li>Kick Off Call</li>
+            <li>Kick Off Call Follow Up Email</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Strategic CSS to schedule a kick-off call upon completing provisioning and Discovery Questionnaire</li>
+            <li>Send follow up on Discovery Questionnaire if incomplete</li>
+            <li>Strategic CSS to lead customer Kick Off</li>
+            <li>Introduces technical resources, sets engagement expectations, advise on deployment plan (encourage pilot testing first), and shares product prerequisites</li>
+            <li>Strategic CSS to share kick-off follow up email and next steps for the deployment</li>
+            <li>Calls and emails can be documented in CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>Create Deployment Goals</li>
+            <li>Discovery Questions & Goal Planning</li>
+            <li>Flag Intended Use</li>
+            <li>Document Deployment Goals and Compelling Events</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Post kick-off call, Strategic CSS to tailor the discovery question list with Onboarding CSS</li>
+            <li>Run through the list with the customer to create/request measurable KPIs to track deployment success</li>
+            <li>Document the customer’s intended use for the product in CS Console</li>
+            <li>If no intent to deploy, create an Adoption Barrier</li>
+            <li>Document in the Action Item Note any compelling reasons or events behind the deployment (ex. Contract ending, breach, compliance, etc.)</li>
+            <li>Update Deployment Goals in CS Console based on goal discovery conversations</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+
+      <tr>
+        <td>Align Goals To Meet Onboarding Exit Criteria</td>
+        <td>Onboarding Exit Criteria</td>
+        <td>
+          <ul>
+            <li>Sending >0% traffic</li>
+            <li>Log in notes the usage before closing</li>
+            <li>At least one admin</li>
+            <li>A plan for next steps</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Document customer’s intended use for each feature in CS Console</li>
+            <li>If the customer does not plan to deploy certain features, document the reason</li>
+            <li>Meet with customer to support feature deployment</li>
+            <li>Verify customer meets minimum viable deployment criteria and agreed goals</li>
+            <li>Onboarding CSS to link deployment plan to Action Item’s note section</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+    </div>
+  </details>
+
+  <details>
+   <tbody>
+      <tr>
+        <td>Assist Customer With Features in 1st Outcome (Secure Application Access)</td>
+        <td>Guide Deployment Of User, Application, and Resource Protection</td>
+        <td>
+          <strong>SIA</strong>
+          <ol>
+            <li>Deploy and register a <a href="#">Roaming Module</a></li>
+            <li>Onboard test sites <a href="#">via network registration</a></li>
+            <li>Customize default SIA <a href="#">policies</a></li>
+            <li>Enable SWG for a roaming module</li>
+          </ol>
+          <strong>SPA</strong>
+          <ol>
+            <li><a href="#">Provision user/group identities</a> in Secure Access (SA)</li>
+            <li>Connect internal resources via <a href="#">IPsec tunnels or Resource Connector</a></li>
+            <li>Configure <a href="#">Private Resource objects</a></li>
+            <li>Establish custom <a href="#">Private Access Rules</a></li>
+            <li>Configure Remote Access VPN service/ZTA</li>
+          </ol>
+        </td>
+        <td>
+          <ul>
+            <li>CSS to identify and document the deployment requirements/goals for this use-case</li>
+            <li>CSS to provide documentation & education on deployment options for each Sub Engagement</li>
+            <li>CSS to document the customer’s intended use for each feature in CS Console (Notes section of this Action Item)</li>
+            <li>CSS to meet with customer to support the deployment of these features and log calls/emails to CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+      <tr>
+        <td>Educate Customer On Features In 2nd Outcome (Threat Visibility & Security Controls)</td>
+        <td>Educate Customer On Threat Visibility & Granular Application/Activity Controls</td>
+        <td>
+          <strong>SIA</strong>
+          <ol>
+            <li>Provision user/group identities using AD connector or Cloud IDP</li>
+            <li>Improve visibility for SWG traffic with <a href="#">SAML</a></li>
+            <li>Deploy at least one pair <a href="#">virtual appliance</a></li>
+            <li>Configure and apply <a href="#">custom SIA policies</a></li>
+            <li>Implement <a href="#">content filtering, application, or destination list</a> rules</li>
+            <li>Set up a <a href="#">web profile</a> with HTTPS decryption and enhanced security features</li>
+            <li>Configure and test a <a href="#">Data Loss Prevention (DLP)</a> profile</li>
+            <li>Configure and test <a href="#">Remote Browser Isolation (RBI)</a></li>
+            <li>Set up and validate an SPA rule with <a href="#">Intrusion Prevention System (IPS)</a></li>
+            <li>Test API integrations</li>
+          </ol>
+          <strong>SPA</strong>
+          <ol>
+            <li>Configure and test <a href="#">posture profiles</a></li>
+            <li>Configure additional remote access client settings</li>
+          </ol>
+        </td>
+        <td>
+          <ul>
+            <li>CSS to identify and document the deployment requirements/goals for this use-case</li>
+            <li>CSS to provide documentation & education on deployment options for each Sub Engagement</li>
+            <li>CSS to document the customer’s intended use for each feature in CS Console (Notes section of this Action Item)</li>
+            <li>CSS to meet with customer to support the deployment of these features and log calls/emails to CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+      <tr>
+        <td>Educate Customer On Features In 3rd Outcome (Seamless Application Access Experience)</td>
+        <td>Educate Customer On Improving User Experience & Productivity</td>
+        <td>
+          <strong>SIA/SPA</strong>
+          <ol>
+            <li>Deploy and utilize <a href="#">insights</a> with the ThousandEyes agent</li>
+          </ol>
+        </td>
+        <td>
+          <ul>
+            <li>CSS to identify and document the deployment requirements/goals for this use-case</li>
+            <li>CSS to provide documentation & education on deployment options for each Sub Engagement</li>
+            <li>CSS to document the customer’s intended use for each feature in CS Console (Notes section of this Action Item)</li>
+            <li>CSS to meet with customer to support the deployment of these features and log calls/emails to CS Console</li>
+          </ul>
+        </td>
+        <td class="owner">Strategic CSS / Onboarding CSS</td>
+      </tr>
+       </tbody>
+    <div>
+  
+      <em>[Insert table from 'Assist Customer With Features in 1st Outcome' to 'Educate Customer On Features In 3rd Outcome']</em>
+    </div>
+  </details>
+
+  <details>
+    <summary>✅ Phase 3: Review & Transition to Adoption</summary>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Action Item</th>
+            <th>Engagement</th>
+            <th>Sub Engagement</th>
+            <th>Description</th>
+            <th>Owner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Complete Deployment Retrospective With The Customer And Discuss Customer Goals, Log Customer Pulse</td>
+            <td>Deployment Review</td>
+            <td>
+              <ul>
+                <li>Deployment Review Offer</li>
+                <li>Deployment Review Call & Transition Introduction</li>
+                <li>Email Follow Up</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>After Onboarding Exit Criteria and deployment goals have been met, the Strategic CSS offers the customer a deployment review</li>
+                <li>Strategic CSS <a href="#">summarizes the deployment, shares successes, and suggestions</a>. Then they transition the customer to a monthly cadence (depending on Segment/Support)</li>
+                <li>Strategic CSS to send notes to the customer summarizing the call and one to many resources</li>
+                <li>Strategic CSS to log call and email can be logged in CS Console</li>
+              </ul>
+            </td>
+            <td class="owner">Strategic CSS / Onboarding CSS</td>
+          </tr>
+          <tr>
+            <td>If Applicable Document Steps to Achieve full SSE Adoption in Customer Environment</td>
+            <td>Transition To Adopt</td>
+            <td>
+              <ul>
+                <li>Complete onboarding exit form</li>
+                <li>Update Customer Pulse</li>
+                <li>Close Onboarding Action Plan</li>
+                <li>Open Adoption Action Plan</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Strategic CSS to complete the onboarding exit form with a summary of the deployment and next steps for adoption</li>
+                <li>Strategic CSS to log the customer’s sentiment as a Customer Pulse following the deployment</li>
+                <li>Strategic CSS to check off remaining Action Items and log notes if they are missing</li>
+                <li>Strategic CSS to mark the Action Plan as Closed-Successful</li>
+              </ul>
+            </td>
+            <td class="owner">Strategic CSS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+</body>
+</html>
