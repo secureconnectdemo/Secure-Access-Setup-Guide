@@ -1,0 +1,93 @@
+<!-- Customer Lifecycle Table with Interactivity -->
+<div style="margin-top: 40px;">
+  <h2 style="font-size: 20px; margin-bottom: 12px;">📈 Customer Lifecycle Overview</h2>
+  <table style="width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+    <thead style="background: #0056c7; color: #fff;">
+      <tr>
+        <th style="padding: 12px;">Phase</th>
+        <th style="padding: 12px;">Focus</th>
+        <th style="padding: 12px;">Goal</th>
+        <th style="padding: 12px;">Key Indicators & Exit Criteria</th>
+        <th style="padding: 12px;">Deliverables</th>
+        <th style="padding: 12px;">Strategic Touchpoints from Customer Success</th>
+        <th style="padding: 12px;">On-Demand CSS</th>
+        <th style="padding: 12px;">Onboarding CSS</th>
+        <th style="padding: 12px;">Adoption CSS</th>
+        <th style="padding: 12px;">Approach</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px; font-weight: bold;">Onboarding</td>
+        <td style="padding: 12px;">Readiness</td>
+        <td style="padding: 12px;">Equip the customer with the tools, access, confidence, and knowledge to begin deployment.</td>
+        <td style="padding: 12px;">Access granted, pilot complete, use cases confirmed, success plan aligned.<br><strong>Exit Criteria:</strong> Pilot successfully tested, Success Plan approved, user login confirmed.</td>
+        <td style="padding: 12px;">Welcome email, Success Plan, Deployment Plan, Pilot Setup Checklist</td>
+        <td style="padding: 12px;">
+          <a href="#">Kickoff call</a>, 
+          <a href="#">pilot planning</a>, 
+          <a href="#">onboarding sessions</a>, 
+          <a href="#">success alignment</a>, 
+          <a href="#">tailored deployment plan</a>, 
+          targeted pilot deployment
+        </td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px; text-align: center;">—</td>
+        <td style="padding: 12px;">One-to-one</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px; font-weight: bold;">Adoption</td>
+        <td style="padding: 12px;">Progression & Momentum</td>
+        <td style="padding: 12px;">Accelerate customer rollout and ensure realization of the primary business use case.</td>
+        <td style="padding: 12px;">Deployment scaled, increased active users, feature usage, value metrics visible.<br><strong>Exit Criteria:</strong> Business use case adopted, telemetry reports value, active usage trending upward.</td>
+        <td style="padding: 12px;">Usage Report, Health Check Summary, Feature Adoption Plan</td>
+        <td style="padding: 12px;">
+          <a href="#">30/60-day check-ins</a>, 
+          <a href="#">adoption tracking</a>, 
+          <a href="#">health check sessions</a>, 
+          <a href="#">Newsletters</a>,
+          <a href="#">value confirmation</a>
+        </td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px; text-align: center;">—</td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px;">One-to-many / One-to-one hybrid</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px; font-weight: bold;">Expansion</td>
+        <td style="padding: 12px;">Broadening Impact</td>
+        <td style="padding: 12px;">Drive additional use case adoption, cross-sell opportunities, and feature enablement.</td>
+        <td style="padding: 12px;">New features activated, additional users/sites onboarded, upsell discussions.<br><strong>Exit Criteria:</strong> At least one opportunity discussed or feature expansion achieved.</td>
+        <td style="padding: 12px;">QBR Decks, Feature Enablement Recap, Expansion Proposal</td>
+        <td style="padding: 12px;">
+          <a href="#">Strategic QBRs</a>, 
+          <a href="#">roadmap reviews</a>, 
+          <a href="#">customer workshops</a>, 
+          <a href="#">co-selling with sales</a>
+        </td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px; text-align: center;">—</td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px;">One-to-many</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; font-weight: bold;">Renewal</td>
+        <td style="padding: 12px;">Retention & Advocacy</td>
+        <td style="padding: 12px;">Reinforce value, maintain satisfaction, and secure renewal. Encourage advocacy if applicable.</td>
+        <td style="padding: 12px;">Renewal confirmed, NPS/satisfaction scores, referrals or case studies initiated.<br><strong>Exit Criteria:</strong> Renewal completed or advocacy activity (case study, testimonial, etc.) completed.</td>
+        <td style="padding: 12px;">Renewal Plan, ROI Report, Advocacy Pitch</td>
+        <td style="padding: 12px;">
+          <a href="#">Executive alignment</a>, 
+          <a href="#">ROI storytelling</a>, 
+          <a href="#">renewal sync</a>, 
+          <a href="#">customer advocacy invitation</a>
+        </td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px; text-align: center;">—</td>
+        <td style="padding: 12px; text-align: center;">✅</td>
+        <td style="padding: 12px;">One-to-one</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
