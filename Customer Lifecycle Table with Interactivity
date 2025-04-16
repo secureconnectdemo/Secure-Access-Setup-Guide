@@ -1,3 +1,15 @@
+laybook
+
+
+
+
+Home
+
+
+
+
+
+Publish
 <!-- Customer Lifecycle Table with Interactivity -->
 <div style="margin-top: 40px;">
   <h2 style="font-size: 20px; margin-bottom: 12px;">📈 Customer Lifecycle Overview</h2>
@@ -87,6 +99,81 @@
         <td style="padding: 12px; text-align: center;">—</td>
         <td style="padding: 12px; text-align: center;">✅</td>
         <td style="padding: 12px;">One-to-one</td>
+      </tr>
+    </tbody>
+  </table>
+</div>       <!-- Customer Risk Signal Response Table -->
+<div style="margin-top: 40px;">
+  <h2 style="font-size: 20px; margin-bottom: 12px;">🚨 Risk Signals & Customer Success Playbook</h2>
+  <table style="width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+    <thead style="background: #c62828; color: #fff;">
+      <tr>
+        <th style="padding: 12px;">Risk Signal</th>
+        <th style="padding: 12px;">Lifecycle Phase</th>
+        <th style="padding: 12px;">What It Indicates</th>
+        <th style="padding: 12px;">Suggested CS Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">No login/activity for X days</td>
+        <td style="padding: 12px;">Onboarding / Adoption</td>
+        <td style="padding: 12px;">User disengagement or confusion</td>
+        <td style="padding: 12px;">Trigger automated re-engagement email + personal CSM outreach to offer help or check-in.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Onboarding tasks past due</td>
+        <td style="padding: 12px;">Onboarding</td>
+        <td style="padding: 12px;">Implementation stalled</td>
+        <td style="padding: 12px;">Escalate internally, involve onboarding lead, realign with customer’s project team.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Declining product usage trend</td>
+        <td style="padding: 12px;">Adoption / Renewal</td>
+        <td style="padding: 12px;">Loss of value/interest – churn risk</td>
+        <td style="padding: 12px;">Reach out to explore reasons, provide training, temporarily increase CS frequency.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Key feature not used at all</td>
+        <td style="padding: 12px;">Adoption</td>
+        <td style="padding: 12px;">Partial adoption – not realizing full value</td>
+        <td style="padding: 12px;">Send content, offer feature demo, follow up usage trends.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Multiple support escalations</td>
+        <td style="padding: 12px;">Adoption / Renewal</td>
+        <td style="padding: 12px;">Customer frustration or technical blockers</td>
+        <td style="padding: 12px;">Engage support leadership, provide updates, CSM manages comms & expectations.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Negative NPS or survey feedback</td>
+        <td style="padding: 12px;">Adoption / Renewal</td>
+        <td style="padding: 12px;">Customer dissatisfaction (explicit)</td>
+        <td style="padding: 12px;">Follow up immediately, address feedback, outline improvements, close the loop.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Champion left the company</td>
+        <td style="padding: 12px;">Adoption / Expansion / Renewal</td>
+        <td style="padding: 12px;">Loss of internal advocate – churn risk</td>
+        <td style="padding: 12px;">Reach out to new contact, provide account history, offer onboarding/training.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">No response to renewal outreach</td>
+        <td style="padding: 12px;">Renewal</td>
+        <td style="padding: 12px;">Potential stealth churn</td>
+        <td style="padding: 12px;">Use alternate contact strategies, escalate internally, show commitment to outcomes.</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px;">Executive stakeholder change</td>
+        <td style="padding: 12px;">Expansion / Renewal</td>
+        <td style="padding: 12px;">Possible strategic pivot or deprioritization</td>
+        <td style="padding: 12px;">Reach new exec quickly, share value stats, schedule alignment meeting.</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px;">Payment issues or budgeting flags</td>
+        <td style="padding: 12px;">Renewal</td>
+        <td style="padding: 12px;">Customer struggling to justify cost</td>
+        <td style="padding: 12px;">Engage buyer on ROI, explore options with Sales if needed (tier, terms).</td>
       </tr>
     </tbody>
   </table>
