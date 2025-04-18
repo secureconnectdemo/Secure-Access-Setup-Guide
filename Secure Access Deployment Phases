@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Access Deployment Playbook</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f4f6f8; padding: 40px; color: #333; }
+    h1, h2, h3 { color: #003366; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+    th, td { border: 1px solid #ccc; padding: 12px; text-align: left; }
+    th { background-color: #e2e8f0; }
+    section { margin-bottom: 60px; }
+    .tag { background: #edf2f7; padding: 2px 8px; border-radius: 4px; font-size: 0.9em; color: #2d3748; }
+  </style>
+</head>
+<body>
+  <h1>🚀 Secure Access Deployment – Phased Rollout Plan</h1>
+
+  <section>
+    <h2>✅ Phase 1: Foundational Security & Threat Protection</h2>
+    <h3>🛡️ Security Features</h3>
+    <table>
+      <tr><th>Description / Function</th><th>Feature</th></tr>
+      <tr><td>Block domains for malware, phishing, botnet, and other high-risk threats</td><td>DNS-Layer Security</td></tr>
+      <tr><td>Gain endpoint, application, and network visibility</td><td>Experience Insights</td></tr>
+      <tr><td>Proxy web traffic for inspection (decrypt and inspect SSL traffic)</td><td>Secure Web Gateway (SWG)</td></tr>
+      <tr><td>Block URLs using Talos feeds; block malicious files via AV</td><td>Secure Web Gateway (SWG)</td></tr>
+      <tr><td>Analyze suspicious files in sandbox</td><td>Secure Malware Analytics (via SWG)</td></tr>
+      <tr><td>Control uploads, attachments, and posts in cloud apps</td><td>Cloud Access Security Broker (CASB)</td></tr>
+      <tr><td>Scan and remove malware in cloud file storage</td><td>Cloud Access Security Broker (CASB)</td></tr>
+      <tr><td>Isolate risky destinations and web content</td><td>Remote Browser Isolation (RBI)</td></tr>
+      <tr><td>User-Level Policies and source attribution via ID provider </td><td>Identity feature</td></tr>
+    </table>
+
+    <h3>🧭 Primary Redirection Method: Unified Client</h3>
+    <table>
+      <tr><th>Method</th><th>Use Case / Notes</th></tr>
+      <tr>
+        <td>Unified Client</td>
+        <td>
+          - Primary redirection for supported devices (Windows 10/11, macOS)<br>
+          - Easy to install and manage<br><br>
+          <strong>Supports full feature stack:</strong><br>
+          • DNS-Layer Security<br>
+          • Experience Insights<br>
+          • Secure Web Gateway (SWG)<br>
+          • Data Loss Prevention (DLP)<br>
+          • Remote Browser Isolation (RBI)<br>
+          • Intrusion Prevention System (IPS)<br>
+          • Zero Trust Network Access (ZTNA)<br>
+          • Remote Access VPN (RaVPN)<br><br>
+          <strong>Identity & Visibility:</strong><br>
+          • AD integration or manual user mapping<br>
+          • Enables user-level policies & source attribution
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔁 Phase 2: Advanced Controls & Deep Inspection</h2>
+    <h3>🛡️ Security Features</h3>
+    <table>
+      <tr><th>Description / Function</th><th>Feature</th></tr>
+      <tr><td>Inline inspection of web and cloud app traffic for sensitive data</td><td>Data Loss Prevention (DLP)</td></tr>
+      <tr><td>Block specific IPs, ports, and protocols (L3/L4)</td><td>Cloud-Delivered Firewall (CDFW)</td></tr>
+      <tr><td>Application layer IPS and outbound threat protection (L7)</td><td>Cloud-Delivered Firewall (CDFW)</td></tr>
+    </table>
+
+    <h3>🧩 Advanced Integrations & Capabilities</h3>
+    <table>
+      <tr><th>Capability / Integration</th><th>Purpose</th></tr>
+      <tr><td>SD-WAN Integration</td><td>Traffic steering and intelligent routing at the network edge</td></tr>
+      <tr><td>ISE Integration</td><td>Leverage identity-based access and context-aware policies</td></tr>
+      <tr><td>BGP Routing Support</td><td>Required for scalable branch-to-cloud connectivity via IPSec tunnels</td></tr>
+      <tr><td>Posture Profiles (Trusted Access)</td><td>Check device health and compliance before granting access</td></tr>
+      <tr><td>IPS with Decryption</td><td>Inspect encrypted traffic for threats using inline IPS capabilities</td></tr>
+      <tr><td>Application Visibility & Control</td><td>Deep traffic inspection and control across layers 3–7</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>🔄 Phase 2 Alternate Redirection Methods (When Client Cannot Be Used)</h2>
+    <table>
+      <tr><th>Method</th><th>Use Case / Scenario</th></tr>
+      <tr><td>Register Networks (DNS Only)</td><td>- Lightweight, agentless<br>- Ideal for IoT, Linux, BYOD<br>- DNS-layer only</td></tr>
+      <tr><td>IPSec Tunnel</td><td>- Used when client can't be installed<br>Required for:<br>• L3/L4 visibility<br>• IPS<br>• Secure Private Access without endpoint agent ,RAVPN can only reach private connected via Ipsec tunnels</td></tr>
+      <tr><td>Virtual Appliance (DNS Only)</td><td>- For non-Windows/macOS devices or legacy systems<br>- DNS-layer protection</td><br>- DNS-layer protection</td></tr>
+      <tr><td>PAC File (Proxy)</td><td>- For browser-only redirection<br>- Enables SWG via proxy<br>- Great for kiosks or managed browsers</td></tr>
+    </table>
+
+    <h3>📌 Redirection Method Summary</h3>
+    <table>
+      <tr><th>Redirection Type</th><th>Best For</th><th>Features Supported</th></tr>
+      <tr><td>Unified Client</td><td>Managed Windows/macOS devices</td><td>✅ Full stack (DNS, SWG, ZTNA, etc.)</td></tr>
+      <tr><td>Network Tunnels</td><td>All Device Types</td><td>✅ Full stack (DNS, SWG, ZTNA, etc.)</td></tr>
+      <tr><td>Register Networks</td><td>BYOD, Guest Wi-Fi, IoT</td><td>✅ DNS Security only</td></tr>
+      <tr><td>Cisco Security Connector</td><td>Mobile Devices</td><td>✅ DNS Security only</td></tr>
+      <tr><td>Virtual Appliance</td><td>Linux endpoints, legacy systems</td><td>✅ DNS Security only</td></tr>
+      <tr><td>PAC File</td><td>Browser-based deployments (e.g., kiosks)</td><td>✅ SWG (proxy only)</td></tr>
+    </table>
+  </section>
+</body>
+</html>
